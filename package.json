@@ -1,12 +1,15 @@
 {
   "scripts": {
-    "start": "servor --reload",
+    "start": "node server.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "servor": "^4.0.2"
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "servor": "^4.0.2",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
