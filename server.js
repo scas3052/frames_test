@@ -3,16 +3,11 @@ const path = require('path');
 
 const app = express();
 
-// Serve static files from the root directory
+// Serve static files
 app.use(express.static(path.join(__dirname, '/')));
 
-// Serve index.html as the root route
+// Root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-// Optional: Fallback for client-side routing (if needed later)
-app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
