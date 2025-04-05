@@ -430,8 +430,11 @@ async function processCODOrder(order, userRef, userData, singleItemId) {
 }
 
 async function processOnlinePayment(order, userRef, userData, singleItemId) {
+  // Get Razorpay API key from environment variables
+  const razorpayKey = import.meta.env.VITE_RAZORPAY_KEY;
+  
   const options = {
-    key: import.meta.env.VITE_RAZORPAY_KEY,
+    key: razorpayKey,
     amount: Math.round(order.total * 100),
     currency: "INR",
     name: "Holy Army Fellowship",

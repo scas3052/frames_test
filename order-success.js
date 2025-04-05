@@ -108,10 +108,7 @@ function renderOrderDetails(order) {
       </div>
       <div class="item-details">
         <h4>${item.name}</h4>
-        ${item.customText ? `
-          <p class="custom-text">Text: "${item.customText}"</p>
-          ${item.verseReference ? `<p class="verse-reference">Reference: ${item.verseReference}</p>` : ''}
-        ` : ''}
+        ${item.customText ? `<p class="custom-text">Custom Text: "${item.customText}"</p>` : ''}
         <p>Quantity: ${item.quantity}</p>
       </div>
       <div class="item-price">
@@ -202,11 +199,7 @@ window.downloadInvoice = function() {
     if (item.customText) {
       yPos += 7;
       doc.setFontSize(10);
-      addText(`Text: "${item.customText}"`, 20, yPos);
-      if (item.verseReference) {
-        yPos += 7;
-        addText(`Reference: ${item.verseReference}`, 20, yPos);
-      }
+      addText(`Custom Text: "${item.customText}"`, 20, yPos);
       doc.setFontSize(12);
     }
     addText(item.quantity, 120, yPos);

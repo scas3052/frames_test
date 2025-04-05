@@ -1,33 +1,15 @@
 {
   "scripts": {
-    "start": "node server.js",
+    "start": "servor --reload",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.2",
-    "servor": "^4.0.2",
-    "socket.io": "^4.8.1"
+    "servor": "^4.0.2"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
-    "vite": "^6.2.2"
-  },
-  "name": "frames_test",
-  "version": "1.0.0",
-  "main": "admin-auth.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scas3052/frames_test.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/scas3052/frames_test/issues"
-  },
-  "homepage": "https://github.com/scas3052/frames_test#readme",
-  "description": ""
+    "vite": "^6.2.0"
+  }
 }

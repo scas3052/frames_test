@@ -1,8 +1,9 @@
 import { auth } from './firebase-config.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 
+// Get admin credentials from environment variables
 const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD; // This is just for verification, actual auth is handled by Firebase
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
 function showMessage(message, isSuccess = false) {
     const messageDiv = document.getElementById('adminLoginMessage');
